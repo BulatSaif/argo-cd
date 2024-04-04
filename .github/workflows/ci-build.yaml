@@ -6,6 +6,7 @@ on:
       - 'release-*'
       - '!release-1.4'
       - '!release-1.5'
+      - 'bs-playground'
   pull_request:
     branches:
       - 'master'
@@ -15,9 +16,6 @@ env:
   # Golang version to use across CI steps
   GOLANG_VERSION: '1.21'
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
 
 permissions:
   contents: read
